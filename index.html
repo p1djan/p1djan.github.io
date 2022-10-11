@@ -8,14 +8,19 @@
 </head>
 <body>
     <script>
-        fetch("https://ipinfo.io/json")
-        .then(function (response) {
-        return response.json();
-        })
+        const params = {
+            method: 'GET',
+            headers: {
+                'accept': 'apllication.json'
+            }
+        }
+        fetch("https://ipinfo.io/json", params)
+        .then(response => response.json())
         .then(function (n) {
             const data = "COUNTRY: " + n.country + " , IP: " + n.ip + " , CITY: " + n.city + " , REGION: " + n.region + " , TIMEZONE: " + n.timezone + " , ORG: " + n.org + " , POSTAL CODE: " + n.postal
             console.log(data);
         })
+        .catch(e => console.error(e))
     </script>
 
     <p>YOUR COUNTRY, IP, CITY, REGION, TIMEZONE, ORGANIZATION, POSTAL CODE GRABBED TO OWNER. THIS IS UNSERVICEABLE. CHECK CONSOLE (CTRL+SHIFT+I)</p>
