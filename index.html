@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IP GRABBER</title>
 </head>
 <body>
-    <button class="g-recaptcha" 
-    data-sitekey="reCAPTCHA_site_key" 
-    data-callback='onSubmit' 
-    data-action='submit'>Submit</button>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
-    <script src="main.js"></script>
+    <script>
+        fetch("https://ipinfo.io/json")
+        .then(function (response) {
+        return response.json();
+        })
+        .then(function (n) {
+            const data = "COUNTRY: " + n.country + " , IP: " + n.ip + " , CITY: " + n.city + " , REGION: " + n.region + " , TIMEZONE: " + n.timezone + " , ORG: " + n.org + " , POSTAL CODE: " + n.postal
+            console.log(data);
+        })
+    </script>
+
+    <p>YOUR COUNTRY, IP, CITY, REGION, TIMEZONE, ORGANIZATION, POSTAL CODE GRABBED TO OWNER. THIS IS UNSERVICEABLE. CHECK CONSOLE (CTRL+SHIFT+I)</p>
+
 </body>
 </html>
