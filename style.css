@@ -1,23 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 .title {
+    margin-left:33%;
+    margin-right:33%;
     font-size: 60px; 
     font-weight: bold; 
     color: #fff;
-    text-decoration:dotted #fff underline;
+    transition: ease 300ms;
+    cursor:default;
+}
+.title:hover {
+    font-size: 65px;
 }
 body {
     background-color: #161616;
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     margin:0px;
 }
 .button {
     display:block;
-    padding: 12px 14px;
-    
+    padding: 16px 20px;
     margin-top: 5px;
     margin-left: 20%;
-    margin-right:20%;
+    margin-right: 20%;
     border-radius: 6px;
     border-color: #252525;
     background-color: #252525;
@@ -34,13 +39,9 @@ center {
     margin-top: 15%;
 }
 
-@media screen and (min-width: 1200px){
-    body {
-        font-size: 16px;
-    }
+@media screen and (min-width: 800px){
     .button {
         display:inline;
         margin:0;
-        padding:16px 20px;
     }
 }
