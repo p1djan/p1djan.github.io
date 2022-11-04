@@ -8,15 +8,18 @@
     transition: ease 300ms;
     cursor:default;
 }
+
 .title:hover {
     font-size: 65px;
 }
+
 body {
     background-color: #161616;
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     margin:0px;
 }
+
 .button {
     display:block;
     padding: 16px 20px;
@@ -32,9 +35,11 @@ body {
     transition: ease 0.6s;
     text-align: center;
 }
+
 .button:hover {
     background-color: #303030;
 }
+
 center {
     margin-top: 15%;
 }
